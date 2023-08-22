@@ -1,0 +1,47 @@
+ext {
+    configs = [
+                compileSdk       : 33,
+//                   buildToolsVersion: '30.0.3',
+               minSdk           : 21,
+               targetSdk        : 33,
+               configVersionCode      : 100,
+               configVersionName      : '1.0.0',
+
+
+    ]
+    def androidx_core = '1.6.0'
+    def lifecycle = '2.6.1'
+    def activity_compose = '1.5.1'
+    def junit_version = '4.13.2'
+    def test_junit = '1.1.5'
+    def espresso_core = '3.5.1'
+
+    def appcompat_version = '3.5.1'
+    def material_version = '1.9.0'
+
+
+
+
+
+    deps = [androidxCore        : "androidx.core:core-ktx:$androidx_core",
+            appcompat        : "androidx.appcompat:appcompat:$appcompat_version",
+            lifecycle        : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle",
+            activityCompose        : "androidx.activity:activity-compose:$activity_compose",
+            junit        : "junit:junit:$junit_version",
+            testJunit        : "androidx.test.ext:junit:$test_junit",
+            espressoCore        : "androidx.test.espresso:espresso-core:$espresso_core",
+            material        : "com.google.android.material:material:$material_version",
+
+
+
+
+
+    ]
+
+
+
+
+
+
+}
+

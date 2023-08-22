@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.newolf.logutils'
+    compileSdk rootProject.configs.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.configs.minSdk
+        targetSdk rootProject.configs.targetSdk
+        versionCode rootProject.configs.configVersionCode
+        versionName rootProject.configs.configVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    compileOnly rootProject.deps.androidxCore
+//    implementation 'androidx.appcompat:appcompat:1.6.1'
+//    implementation 'com.google.android.material:material:1.9.0'
+//    implementation 'com.google.code.gson:gson:2.8.9'
+    testImplementation rootProject.deps.junit
+    androidTestImplementation rootProject.deps.testJunit
+    androidTestImplementation rootProject.deps.espressoCore
+}
